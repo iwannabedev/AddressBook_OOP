@@ -1,11 +1,9 @@
 #include "PlikZUzytkownikami.h"
 
-PlikZUzytkownikami::PlikZUzytkownikami() {
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-}
-
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
     string liniaZDanymiUzytkownika = "";
+
+    fstream plikTekstowy;
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
     if (plikTekstowy.good() == true) {
@@ -14,7 +12,7 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
         if (czyPlikJestPusty() == true) {
             plikTekstowy << liniaZDanymiUzytkownika;
         } else {
-            plikTekstowy << endl << liniaZDanymiUzytkownika ;
+            plikTekstowy << endl << liniaZDanymiUzytkownika;
         }
     } else
         cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZUzytkownikami << " i zapisac w nim danych." << endl;
@@ -22,7 +20,10 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 }
 
 bool PlikZUzytkownikami::czyPlikJestPusty() {
+    fstream plikTekstowy;
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
     plikTekstowy.seekg(0, ios::end);
+
     if (plikTekstowy.tellg() == 0)
         return true;
     else
@@ -44,6 +45,7 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku() {
     vector <Uzytkownik> uzytkownicy;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
 
+    fstream plikTekstowy;
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
 
     if (plikTekstowy.good() == true) {
