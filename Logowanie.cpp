@@ -29,3 +29,7 @@ int Logowanie::logowanieUzytkownika(vector <Uzytkownik> uzytkownicy) {
     system("pause");
     return 0;
 }
+
+int Logowanie::wylogowanieUzytkownika() {
+    return 0;
+}

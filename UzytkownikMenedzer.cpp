@@ -64,6 +64,8 @@ int UzytkownikMenedzer::logowanieUzytkownika() {
     idZalogowanegoUzytkownika = logowanie.logowanieUzytkownika(pobierzUzytkownikow());
 }
 
-void UzytkownikMenedzer::pobierzIdZalogowanego() {
-    cout << idZalogowanegoUzytkownika;
+int UzytkownikMenedzer::wylogowanieUzytkownika() {
+    Logowanie logowanie;
+    idZalogowanegoUzytkownika = logowanie.wylogowanieUzytkownika();
 }
+

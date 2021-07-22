@@ -12,4 +12,5 @@ class Logowanie {
 
 public:
     int logowanieUzytkownika(vector <Uzytkownik> uzytkownicy);
+    int wylogowanieUzytkownika();
 };

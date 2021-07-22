@@ -12,6 +12,6 @@ int KsiazkaAdresowa::logowanieUzytkownika() {
     uzytkownikMenedzer.logowanieUzytkownika();
 }
 
-void KsiazkaAdresowa::pobierzIdZalogowanego() {
-    uzytkownikMenedzer.pobierzIdZalogowanego();
+int KsiazkaAdresowa::wylogowanieUzytkownika() {
+    uzytkownikMenedzer.wylogowanieUzytkownika();
 }
