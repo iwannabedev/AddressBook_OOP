@@ -9,6 +9,7 @@
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
 #include "MetodyPomocnicze.h"
+#include "Logowanie.h"
 
 using namespace std;
 
@@ -26,4 +27,7 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    vector <Uzytkownik> pobierzUzytkownikow();
+    int logowanieUzytkownika();
+    void pobierzIdZalogowanego();
 };

@@ -54,3 +54,16 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
+
+vector <Uzytkownik> UzytkownikMenedzer::pobierzUzytkownikow() {
+    return uzytkownicy;
+}
+
+int UzytkownikMenedzer::logowanieUzytkownika() {
+    Logowanie logowanie;
+    idZalogowanegoUzytkownika = logowanie.logowanieUzytkownika(pobierzUzytkownikow());
+}
+
+void UzytkownikMenedzer::pobierzIdZalogowanego() {
+    cout << idZalogowanegoUzytkownika;
+}
