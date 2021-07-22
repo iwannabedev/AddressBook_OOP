@@ -54,3 +54,18 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
+
+vector <Uzytkownik> UzytkownikMenedzer::pobierzUzytkownikow() {
+    return uzytkownicy;
+}
+
+int UzytkownikMenedzer::logowanieUzytkownika() {
+    Logowanie logowanie;
+    idZalogowanegoUzytkownika = logowanie.logowanieUzytkownika(pobierzUzytkownikow());
+}
+
+int UzytkownikMenedzer::wylogowanieUzytkownika() {
+    Logowanie logowanie;
+    idZalogowanegoUzytkownika = logowanie.wylogowanieUzytkownika();
+}
+
