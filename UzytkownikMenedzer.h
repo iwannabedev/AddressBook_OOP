@@ -30,4 +30,5 @@ public:
     vector <Uzytkownik> pobierzUzytkownikow();
     int logowanieUzytkownika();
     int wylogowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
