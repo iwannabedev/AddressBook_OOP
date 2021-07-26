@@ -31,4 +31,6 @@ public:
     int logowanieUzytkownika();
     int wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+//    static int pobierzIdZalogowanegoUzytkownika();
 };

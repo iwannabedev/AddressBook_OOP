@@ -1,5 +1,4 @@
-#ifndef ADRESAT_H
-#define ADRESAT_H
+#pragma once
 
 #include <iostream>
 
@@ -31,5 +30,3 @@ public:
     string pobierzEmail();
     string pobierzAdres();
 };
-
-#endif
