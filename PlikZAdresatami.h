@@ -10,13 +10,11 @@
 using namespace std;
 
 class PlikZAdresatami {
-
-public:
     string nazwaPlikuZAdresatami;
 
     bool czyPlikJestPusty();
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
 
+public:
     void dopiszAdresataDoPliku(Adresat adresat);
-
 };

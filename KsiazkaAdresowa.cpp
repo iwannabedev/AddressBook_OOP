@@ -8,12 +8,12 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
 
-int KsiazkaAdresowa::logowanieUzytkownika() {
+void KsiazkaAdresowa::logowanieUzytkownika() {
     uzytkownikMenedzer.logowanieUzytkownika();
     cout << endl << "id zalogowanego usera 1:" << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() << endl;
 }
 
-int KsiazkaAdresowa::wylogowanieUzytkownika() {
+void KsiazkaAdresowa::wylogowanieUzytkownika() {
     uzytkownikMenedzer.wylogowanieUzytkownika();
 }
 
