@@ -17,4 +17,6 @@ public:
     bool czyPlikJestPusty();
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
 
+    void dopiszAdresataDoPliku(Adresat adresat);
+
 };

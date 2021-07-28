@@ -25,3 +25,26 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
 
     return liniaZDanymiAdresata;
 }
+
+void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat) {
+    string liniaZDanymiAdresata = "";
+    fstream plikTekstowy;
+
+    string nazwaPlikuZAdresatami = "Adresaci.txt";
+
+    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
+
+    if (plikTekstowy.good() == true) {
+        liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
+
+        if (czyPlikJestPusty() == true) {
+            plikTekstowy << liniaZDanymiAdresata;
+        } else {
+            plikTekstowy << endl << liniaZDanymiAdresata ;
+        }
+    } else {
+        cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
+    }
+    plikTekstowy.close();
+    system("pause");
+}

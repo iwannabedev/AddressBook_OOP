@@ -12,7 +12,7 @@ void AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika ) {
     adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
 
     adresaci.push_back(adresat);
-    dopiszAdresataDoPliku(adresat);
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika) {
@@ -65,27 +65,5 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
     cout << "Adres:             " << adresat.pobierzAdres() << endl;
 }
 
-void AdresatMenedzer::dopiszAdresataDoPliku(Adresat adresat) {
-    string liniaZDanymiAdresata = "";
-    fstream plikTekstowy;
 
-    string nazwaPlikuZAdresatami = "Adresaci.txt";
-
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
-
-    if (plikTekstowy.good() == true) {
-        liniaZDanymiAdresata = plikZAdresatami.zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
-
-//        if (plikZAdresatami.czyPlikJestPusty(plikTekstowy) == true) {
-        if (plikZAdresatami.czyPlikJestPusty() == true) {
-            plikTekstowy << liniaZDanymiAdresata;
-        } else {
-            plikTekstowy << endl << liniaZDanymiAdresata ;
-        }
-    } else {
-        cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
-    }
-    plikTekstowy.close();
-    system("pause");
-}
 
