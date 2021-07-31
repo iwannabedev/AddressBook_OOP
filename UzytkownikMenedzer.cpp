@@ -51,10 +51,6 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
     }
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 vector <Uzytkownik> UzytkownikMenedzer::pobierzUzytkownikow() {
     return uzytkownicy;
 }
