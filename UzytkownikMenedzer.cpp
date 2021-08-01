@@ -55,12 +55,12 @@ vector <Uzytkownik> UzytkownikMenedzer::pobierzUzytkownikow() {
     return uzytkownicy;
 }
 
-int UzytkownikMenedzer::logowanieUzytkownika() {
+void UzytkownikMenedzer::logowanieUzytkownika() {
     Logowanie logowanie;
     idZalogowanegoUzytkownika = logowanie.logowanieUzytkownika(pobierzUzytkownikow());
 }
 
-int UzytkownikMenedzer::wylogowanieUzytkownika() {
+void UzytkownikMenedzer::wylogowanieUzytkownika() {
     Logowanie logowanie;
     idZalogowanegoUzytkownika = logowanie.wylogowanieUzytkownika();
 }
