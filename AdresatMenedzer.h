@@ -11,7 +11,6 @@
 using namespace std;
 
 class AdresatMenedzer {
-    int idOstatniegoAdresata;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
 
@@ -19,7 +18,7 @@ class AdresatMenedzer {
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    AdresatMenedzer();
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
     void dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
 };

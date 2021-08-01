@@ -1,9 +1,5 @@
 #include "AdresatMenedzer.h"
 
-AdresatMenedzer::AdresatMenedzer() {
-    idOstatniegoAdresata = 0;
-}
-
 void AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika ) {
     Adresat adresat;
 
@@ -18,7 +14,7 @@ void AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika ) {
 Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika) {
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";

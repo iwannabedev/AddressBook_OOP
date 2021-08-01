@@ -1,9 +1,9 @@
 #include "PlikZAdresatami.h"
 
 bool PlikZAdresatami::czyPlikJestPusty() {
-    nazwaPlikuZAdresatami = "Adresaci.txt";
+//    NAZWA_PLIKU_Z_ADRESATAMI = "Adresaci.txt";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
     plikTekstowy.seekg(0, ios::end);
 
     if (plikTekstowy.tellg() == 0)
@@ -30,9 +30,9 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat) {
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
 
-    string nazwaPlikuZAdresatami = "Adresaci.txt";
+//    string NAZWA_PLIKU_Z_ADRESATAMI = "Adresaci.txt";
 
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true) {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
@@ -46,5 +46,10 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat) {
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
     plikTekstowy.close();
+    idOstatniegoAdresata++;
     system("pause");
+}
+
+int PlikZAdresatami::pobierzIdOstatniegoAdresata() {
+    return idOstatniegoAdresata;
 }
