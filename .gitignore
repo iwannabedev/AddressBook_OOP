@@ -38,8 +38,5 @@ obj/
 *.layout
 *.depend
 
-# UML diagrams
-plan/
-
 # User data
 *.txt
