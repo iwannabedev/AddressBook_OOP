@@ -42,3 +42,7 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
         system("pause");
     }
 }
+
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany() {
+    uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+}
