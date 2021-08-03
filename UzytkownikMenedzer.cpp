@@ -14,7 +14,6 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
     Uzytkownik uzytkownik;
 
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
-
     do {
         cout << "Podaj login: ";
         uzytkownik.ustawLogin(MetodyPomocnicze::wczytajLinie());
@@ -67,6 +66,7 @@ void UzytkownikMenedzer::wylogowanieUzytkownika() {
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
     string noweHaslo = "";
+
     cout << "Podaj nowe haslo: ";
     noweHaslo = MetodyPomocnicze::wczytajLinie();
 
