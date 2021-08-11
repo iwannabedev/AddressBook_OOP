@@ -29,4 +29,6 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     bool czyUzytkownikJestZalogowany();
+    void usunAdresata();
+    void edytujAdresata();
 };
