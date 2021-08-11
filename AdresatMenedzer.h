@@ -19,7 +19,6 @@ class AdresatMenedzer {
     void wyswietlDaneAdresata(Adresat adresat);
     int podajIdWybranegoAdresata();
 
-
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
         : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika) {
