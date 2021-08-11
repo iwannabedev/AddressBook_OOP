@@ -180,3 +180,47 @@ void PlikZAdresatami::zmienNazwePliku(string staraNazwa, string nowaNazwa) {
     else
         cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
 }
+
+void PlikZAdresatami::edytujWybranegoAdresataWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresataPoEdycji) {
+    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
+    string wczytanaLinia = "";
+
+    bool pierwszaLinia = true;
+
+    //Zrob z tego zmienna globalna!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!
+    string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_temp.txt";
+
+//    int numerWczytanejLinii = 1;
+
+    odczytywanyPlikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+    tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
+
+    if (odczytywanyPlikTekstowy.good() == true && idEdytowanegoAdresata != 0) {
+        while (getline(odczytywanyPlikTekstowy, wczytanaLinia)) {
+            if (idEdytowanegoAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia)) {
+                if (!pierwszaLinia) {
+                    tymczasowyPlikTekstowy << endl;
+                }
+                tymczasowyPlikTekstowy << wczytanaLinia;
+                pierwszaLinia = false;
+            } else if (idEdytowanegoAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia)) {
+                if (!pierwszaLinia) {
+                    tymczasowyPlikTekstowy << endl;
+                }
+                tymczasowyPlikTekstowy << liniaZDanymiAdresataPoEdycji;
+                pierwszaLinia = false;
+            }
+        }
+        odczytywanyPlikTekstowy.close();
+        tymczasowyPlikTekstowy.close();
+
+        usunPlik(NAZWA_PLIKU_Z_ADRESATAMI);
+        zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, NAZWA_PLIKU_Z_ADRESATAMI);
+    }
+}
