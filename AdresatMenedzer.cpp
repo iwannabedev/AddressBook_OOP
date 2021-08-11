@@ -113,8 +113,6 @@ void AdresatMenedzer::edytujAdresata() {
     system("cls");
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
-//    int numerLiniiEdytowanegoAdresata = 0;
-//    string liniaZDanymiAdresata = "";
 
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;
     idEdytowanegoAdresata = podajIdWybranegoAdresata();
