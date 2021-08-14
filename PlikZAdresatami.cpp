@@ -187,7 +187,7 @@ void PlikZAdresatami::edytujWybranegoAdresataWPliku(int idEdytowanegoAdresata, s
                 }
                 tymczasowyPlikTekstowy << wczytanaLinia;
                 pierwszaLinia = false;
-            } else if (idEdytowanegoAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia)) {
+            } else {
                 if (!pierwszaLinia) {
                     tymczasowyPlikTekstowy << endl;
                 }
