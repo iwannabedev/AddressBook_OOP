@@ -20,6 +20,7 @@ class AdresatMenedzer {
     int podajIdWybranegoAdresata();
     char wybierzOpcjeZMenuEdycja();
     void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
@@ -30,4 +31,6 @@ public:
     void wyswietlWszystkichAdresatow();
     int usunAdresata();
     void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
