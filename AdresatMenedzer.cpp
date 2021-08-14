@@ -58,12 +58,13 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow() {
 }
 
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
-    cout << endl << "Id:        " << adresat.pobierzId() << endl;
-    cout << "Imie:              " << adresat.pobierzImie() << endl;
-    cout << "Nazwisko:          " << adresat.pobierzNazwisko() << endl;
-    cout << "Numer telefonu:    " << adresat.pobierzNumerTelefonu() << endl;
-    cout << "Email:             " << adresat.pobierzEmail() << endl;
-    cout << "Adres:             " << adresat.pobierzAdres() << endl;
+    cout << endl;
+    cout << "Id:             " << adresat.pobierzId() << endl;
+    cout << "Imie:           " << adresat.pobierzImie() << endl;
+    cout << "Nazwisko:       " << adresat.pobierzNazwisko() << endl;
+    cout << "Numer telefonu: " << adresat.pobierzNumerTelefonu() << endl;
+    cout << "Email:          " << adresat.pobierzEmail() << endl;
+    cout << "Adres:          " << adresat.pobierzAdres() << endl;
 }
 
 int AdresatMenedzer::usunAdresata() {
