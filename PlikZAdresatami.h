@@ -15,7 +15,6 @@ class PlikZAdresatami :public PlikTekstowy {
     int idOstatniegoAdresata;
 
     bool czyPlikJestPusty();
-    string pobierzLiczbe(string tekst, int pozycjaZnaku);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
